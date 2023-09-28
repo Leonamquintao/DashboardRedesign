@@ -1,0 +1,7 @@
+{
+  "accounts": [
+		{ "id": 745, "name": "Acme Corp", "type": "business", "upcoming_trips": 1 },
+		{ "id": 785, "name": "Leonam Rodrigo Quintão", "type": "personal", "upcoming_trips": 3 },
+		{ "id": 788, "name": "Mei Corp", "type": "business", "upcoming_trips": null }
+	]
+}
