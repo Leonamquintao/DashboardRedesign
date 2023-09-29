@@ -1,8 +1,9 @@
 import React from 'react';
 import {Text, StyleSheet, TouchableOpacity} from 'react-native';
 import ActionSheet from 'react-native-actions-sheet';
+import AccountItem from './AccountItem';
 
-type listItem = {
+export type listItem = {
   id: number;
   name: string;
   type: string;
@@ -29,7 +30,7 @@ const AccountSelector = ({
       <Text style={actionSheetTitle}>Switch Accounts</Text>
 
       {data.map((item: listItem) => (
-        <Text key={item.id}>{item.name}</Text>
+        <AccountItem {...item} />
       ))}
     </ActionSheet>
   );
@@ -37,8 +38,8 @@ const AccountSelector = ({
 
 const styles = StyleSheet.create({
   actionSheetContainerStyle: {
-    height: 300,
-    marginVertical: 30,
+    minHeight: 300,
+    marginVertical: 12,
     paddingHorizontal: 20,
   },
   actionSheetClosePill: {
@@ -51,6 +52,7 @@ const styles = StyleSheet.create({
   },
   actionSheetTitle: {
     textAlign: 'center',
+    marginVertical: 10,
   },
 });
 
